@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>mgGlitch demo</title>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,900,300' rel='stylesheet' type='text/css'>
+    <!-- Demo styles -->
+    <style>
+        *, *:after, *:before {-moz-box-sizing:border-box; box-sizing:border-box;}
+        body, html {position: relative; height: 100%; width: 100%; overflow: hidden;}
+        body { background-color: #fff; margin: 0;}
+        h1 {position: absolute; top:0; left :0; z-index: 10; width: 100%; text-align: center; font-family: 'Roboto', Arial, Helvetica, sans-serif; margin-top: 30px; font-size: 16px;  color: #f54955; }
+        p { position: absolute; bottom:0; left :0; z-index: 10; width: 100%; text-align: center; font-family: 'Roboto', Arial, Helvetica, sans-serif; color: #999999;  margin-bottom: 30px; font-size: 14px;}
+        p a {color: #f54955; text-decoration: none; outline: none;}
+        
+        .container {position: relative; margin: 80px; background-color: #fff; width: calc(100% - 160px); height: calc(100% - 160px); overflow: hidden; }
+
+        /* glitch elem must have absolute position */
+        .glitch-img {position: absolute; width : 100%; height : 100%; top: 0 ; left : 0; background-position:center;  -moz-background-size:cover;-o-background-size:cover;-webkit-background-size:cover;background-size:cover;
+        } 
+        
+    </style>
+</head>   
+<body>
+
+    <h1>mgGlitch.js</h1>
+
+    <div class="container">
+        <!-- this elem will be glitch -->
+        <div class="glitch-img" style="background-image: url('img/mosh1.jpg"></div>
+    </div>
+
+    <p>Find this project on <a href="#" title="Github">Github</a></p>
+
+    <!-- include jQuery -->
+    <script
+	    src="https://code.jquery.com/jquery-2.2.4.min.js"
+	    integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+	    crossorigin="anonymous">
+    </script>
+
+    <!-- include plugin src -->
+    <script src="../src/mgGlitch.min.js"></script>
+    
+    <!-- active plugin -->
+    <script>
+		$( function() {
+			$( ".glitch-img" ).mgGlitch({
+				destroy : false, // set 'true' to stop the plugin
+                glitch: true, // set 'false' to stop glitching
+                scale: true, // set 'false' to stop scaling
+                blend : true, // set 'false' to stop glitch blending
+                blendModeType : 'hard-light', // select blend mode type
+                glitch1TimeMin : 600, // set min time for glitch 1 elem
+                glitch1TimeMax : 900, // set max time for glitch 1 elem
+                glitch2TimeMin : 10, // set min time for glitch 2 elem
+                glitch2TimeMax : 115, // set max time for glitch 2 elem
+			});
+
+		});
+	</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
