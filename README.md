@@ -8,7 +8,7 @@ This plugin with clone the selected element 3 times :
 
 ## Configuration
 - Set the element you want to glitch with absolute position
-- Include jquery script
+- Include jquery library
 - Instantiate plugin ( check the demo below for example )
 
 View the demo of this project on [codepen](http://codepen.io/hmongouachon/pen/LZGwWY)
