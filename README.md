@@ -1,10 +1,10 @@
-## mgGlitch configuration
+## Plugin description
 
-This plugin with clone the selected element 3 times :
-   - element as static background
-   - element with glitch property and lower interval
-   - element with glitch property, higher interval and scale options
-   - element with glitch property, higher interval, scale options and blend mode apply 
+This plugin will clone the selected element (html or image) 3 times :
+   - first element become a static background
+   - next element with glitch property and lower interval
+   - next element with glitch property, higher interval and scale options
+   - next element with glitch property, higher interval, scale options and blend mode apply 
 
 ## Configuration
 - Set the element you want to glitch with absolute position
