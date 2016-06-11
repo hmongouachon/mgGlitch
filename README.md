@@ -1,4 +1,4 @@
-## MgGlitch configuration
+## mgGlitch configuration
 
 This plugin with clone the selected element 3 times :
    - element as static background
@@ -10,3 +10,6 @@ This plugin with clone the selected element 3 times :
 - Set the element you want to glitch with absolute position
 - Include jquery script
 - Instantiate plugin ( check the demo for example )
+
+Find a demo of this project on [codepen](http://codepen.io/hmongouachon/pen/LZGwWY)
+
