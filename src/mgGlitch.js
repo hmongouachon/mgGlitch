@@ -26,6 +26,7 @@
 				glitch1TimeMax : 900,
 				glitch2TimeMin : 10,
 				glitch2TimeMax : 115,
+				zIndexStart : 5
 
 			};
 
@@ -69,6 +70,9 @@
                                 // random time interval for second glitch elem : between min and max
 				var glitch2TimeMin = this.settings.glitch2TimeMin;
 				var glitch2TimeMax = this.settings.glitch2TimeMax;
+				
+				// zIndex value for first layer
+				var zIndexStart = this.settings.zIndexStart;
                 
                                 // randomize number between min and max
 				function getRandomInt(min, max) {
@@ -88,14 +92,14 @@
 
                 	                // clone this.element insert back addclass el-back = static element
                                         var cloneEl = $(el).clone();
-                                        cloneEl.insertBefore(el).addClass('back').css({'z-index': '0'});
+                                        cloneEl.insertBefore(el).addClass('back').css({'z-index': zIndexStart});
 
                                         // blending elements : front-3
                                         if (this.settings.blend === true) { 
 
                                                 // clone element insert front addclass el-front-3
                                                 var cloneEl = $(el).clone();
-                                                cloneEl.insertAfter(el).addClass('front-3').css({'z-index' : '3', 'mix-blend-mode' : this.settings.blendModeType}); // , 'mix-blend-mode': 'hard-light'
+                                                cloneEl.insertAfter(el).addClass('front-3').css({'z-index' : zIndexStart + 3, 'mix-blend-mode' : this.settings.blendModeType}); // , 'mix-blend-mode': 'hard-light'
                                                blendElem();
                                         } 
 
@@ -104,10 +108,10 @@
 
                                                 // clone element insert front addclass el-front-1 = first glitch element
                                                var cloneEl = $(el).clone();
-                                               cloneEl.insertAfter(el).addClass('front-2').css({'z-index' : '2'});
+                                               cloneEl.insertAfter(el).addClass('front-2').css({'z-index' : zIndexStart + 2});
 
                                                // add class middle to elem
-                                               $('.back').next().addClass('front-1');
+                                               $('.back').next().addClass('front-1').css({'z-index' : zIndexStart + 1});
 
                                                // call recursives functions with random timing apply
                                                glitch1(), glitch2();
