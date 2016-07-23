@@ -91,7 +91,7 @@
                 
                                 else if(this.settings.destroy === false ) {
 
-                	                // clone this.element insert back addclass el-back = static element
+                	                // clone this.element insert before addclass back = static element
                                         var cloneEl = $(el).clone();
                                         cloneEl.insertBefore(el).addClass('back').css({'z-index': zIndexStart});
 
