@@ -83,8 +83,8 @@
                                 if(this.settings.destroy === true) {
 
                 	                // check if created elements exists and remove them
-                                        if($(el).hasClass('el-front-1') || $(el).hasClass('front-3') || $(el).hasClass('front-2')){
-                	                        $('.front-1, .front-2, .front-3').remove();
+                                        if($(el).siblings().hasClass('el-front-1') || $(el).siblings().hasClass('front-3') || $(el).siblings().hasClass('front-2')){
+                	                        $(el).siblings('.front-1, .front-2, .front-3').remove();
                                         }
                                         $('.back').removeClass('back');
                                 } 
