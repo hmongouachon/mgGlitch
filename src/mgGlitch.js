@@ -84,7 +84,7 @@
 
                 	                // check if created elements exists and remove them
                                         if($(el).siblings().hasClass('el-front-1') || $(el).siblings().hasClass('front-3') || $(el).siblings().hasClass('front-2')){
-                	                        $('.front-1, .front-2, .front-3').remove();
+                	                        $(el).siblings('.front-1, .front-2, .front-3').remove();
                                         }
                                         $('.back').removeClass('back');
                                 } 
